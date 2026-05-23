@@ -1,0 +1,63 @@
+.nome-aluno {
+    font-weight: bold;
+}
+
+.curso-aluno {
+    color: var(--texto-secundario);
+    margin-bottom: 30px;
+}
+
+.curso-aluno span {
+    font-weight: bold;
+    color: var(--amarelo-primario);
+}
+
+.dashboard-perfil {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.card-informativo {
+    background-color: var(--branco);
+    border-radius: var(--raio-borda);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    min-width: 250px;
+    box-shadow: var(--sombra);
+    flex: 1;
+}
+
+.icone-periodo, .icone-matriculas, .icone-coeficiente, .icone-situacao {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.icone-periodo { background-color: #e7f0ff; color: var(--azul); }
+.icone-matriculas { background-color: #e8f5e9; color: var(--verde); }
+.icone-coeficiente { background-color: #fff8e1; color: var(--amarelo); }
+.icone-situacao { background-color: #f3e5f5; color: var(--roxo); }
+
+.info-card p {
+    margin: 0;
+    font-size: 12px;
+    color: var(--texto-suave);
+}
+
+.info-card h2.valor {
+    margin: 4px 0;
+    font-size: 22px;
+}
+
+.icone-periodo + .info-card h2.valor { color: var(--azul); }
+.icone-matriculas + .info-card h2.valor { color: var(--verde); }
+.icone-coeficiente + .info-card h2.valor { color: var(--amarelo); }
+.icone-situacao + .info-card h2.valor { color: var(--roxo); }

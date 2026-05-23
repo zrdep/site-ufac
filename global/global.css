@@ -1,0 +1,70 @@
+/* Variáveis */
+:root {
+    --azul: #0C4F9D;
+    --amarelo: #ffc107;
+    --cinza: #403F4C;
+    --cinza-claro: #9FADBA;
+    --verde: #28a745;
+    --vermelho: #dc3545;
+    --roxo: #6f42c1;
+    
+    --fundo-claro: #f4f7f9;
+    --texto-principal: #333;
+    --texto-secundario: #666;
+    --texto-suave: #888;
+    
+    --branco: #ffffff;
+    --sombra: 0 4px 6px rgba(0, 0, 0, 0.05);
+    --raio-borda: 12px;
+}
+
+/* Como usar as variáveis 
+exemplo:
+h1 {
+color: var(--azul); 
+}
+
+Recomendo baixar uma extensão chamada "Color Highlight" 
+destaca as cores diretamente no código
+
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--fundo-claro);
+    color: var(--texto-principal);
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 5px;
+}
+
+.texto-primario { color: var(--azul-primario); }
+.texto-sucesso { color: var(--verde-sucesso); }
+.texto-alerta { color: var(--laranja-alerta); }
+.texto-secundario { color: var(--texto-secundario); }
+
+.grade-dashboard {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card-base {
+    background-color: var(--branco);
+    border-radius: var(--raio-borda);
+    padding: 20px;
+    box-shadow: var(--sombra);
+}
