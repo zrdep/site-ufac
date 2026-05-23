@@ -7,9 +7,10 @@
     margin-bottom: 30px;
 }
 
-.curso-aluno span {
+.curso-aluno span, .nome-aluno {
     font-weight: bold;
-    color: var(--amarelo-primario);
+    color: var(--amarelo);
+
 }
 
 .dashboard-perfil {
