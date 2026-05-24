@@ -1,5 +1,6 @@
 .nome-aluno {
     font-weight: bold;
+    color: var(--amarelo);
 }
 
 .curso-aluno {
@@ -7,39 +8,38 @@
     margin-bottom: 30px;
 }
 
-.curso-aluno span, .nome-aluno {
+.curso-aluno span {
     font-weight: bold;
     color: var(--amarelo);
-
 }
 
-.dashboard-perfil {
+.dashboard-resumo {
     display: flex;
     gap: 20px;
+    margin-bottom: 30px;
     flex-wrap: wrap;
-    justify-content: flex-start;
 }
 
 .card-informativo {
     background-color: var(--branco);
     border-radius: var(--raio-borda);
-    padding: 20px;
+    padding: 15px 20px;
     display: flex;
     align-items: center;
-    gap: 20px;
-    min-width: 250px;
-    box-shadow: var(--sombra);
+    gap: 15px;
     flex: 1;
+    min-width: 220px;
+    box-shadow: var(--sombra);
 }
 
 .icone-periodo, .icone-matriculas, .icone-coeficiente, .icone-situacao {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 24px;
+    font-size: 20px;
 }
 
 .icone-periodo { background-color: #e7f0ff; color: var(--azul); }
@@ -47,18 +47,146 @@
 .icone-coeficiente { background-color: #fff8e1; color: var(--amarelo); }
 .icone-situacao { background-color: #f3e5f5; color: var(--roxo); }
 
-.info-card p {
+.info-card p { margin: 0; font-size: 11px; color: var(--texto-suave); }
+.info-card h2.valor { margin: 2px 0; font-size: 20px; color: var(--azul); }
+
+.conteudo-principal {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.coluna-esquerda {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.secao-disciplinas {
+    width: 100%;
+}
+
+.tabela-disciplinas {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--branco);
+    border-radius: var(--raio-borda);
+    overflow: hidden;
+    box-shadow: var(--sombra);
+}
+
+.tabela-disciplinas th {
+    background-color: #cbd5e0;
+    padding: 12px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.tabela-disciplinas td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #f0f2f5;
+    font-size: 14px;
+}
+
+.status-aprovado { color: var(--verde); font-weight: bold; }
+.status-processo { color: var(--azul); font-weight: bold; }
+
+.secao-frequencia {
+    width: 100%;
+}
+
+.card-base-frequencia {
+    background-color: var(--branco);
+    border-radius: var(--raio-borda);
+    padding: 20px;
+    box-shadow: var(--sombra);
+    max-width: 300px;
+}
+
+.titulo-card {
+    font-size: 16px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: var(--texto-principal);
+}
+
+.frequencia-info {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.valor-frequencia {
+    font-size: 32px;
+    color: var(--texto-principal);
     margin: 0;
+}
+
+.frequencia-detalhes p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: var(--texto-secundario);
+}
+
+.frequencia-detalhes span {
+    font-weight: bold;
+    color: var(--texto-principal);
+}
+
+.destaque-vermelho {
+    color: var(--vermelho-perigo) !important;
+}
+
+/* Calendário */
+.secao-calendario {
+    flex: 1;
+    min-width: 300px;
+    background-color: var(--branco);
+    border-radius: var(--raio-borda);
+    padding: 20px;
+    box-shadow: var(--sombra);
+}
+
+.titulo-secao { font-size: 16px; margin-bottom: 15px; font-weight: bold; }
+
+.calendario-mini { font-size: 13px; }
+
+.calendario-topo {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.mes-ano { color: var(--azul); font-weight: bold; }
+
+.tabela-mes { width: 100%; text-align: center; border-collapse: collapse; }
+.tabela-mes th { padding-bottom: 10px; color: var(--texto-suave); font-weight: normal; }
+.tabela-mes td { padding: 8px 0; width: 30px; }
+
+.fora { color: #ccc; }
+.dia-azul, .dia-verde, .dia-amarelo { color: white; border-radius: 10%; font-weight: bold; }
+.dia-azul { background-color: var(--azul); }
+.dia-verde { background-color: var(--verde); }
+.dia-amarelo { background-color: var(--amarelo); }
+
+.eventos-mini {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.evento {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     font-size: 12px;
-    color: var(--texto-suave);
+    margin-bottom: 8px;
+    color: var(--texto-secundario);
 }
 
-.info-card h2.valor {
-    margin: 4px 0;
-    font-size: 22px;
-}
-
-.icone-periodo + .info-card h2.valor { color: var(--azul); }
-.icone-matriculas + .info-card h2.valor { color: var(--verde); }
-.icone-coeficiente + .info-card h2.valor { color: var(--amarelo); }
-.icone-situacao + .info-card h2.valor { color: var(--roxo); }
+.bolinha { width: 8px; height: 8px; border-radius: 10%; }
+.bolinha.azul { background-color: var(--azul); }
+.bolinha.verde { background-color: var(--verde); }
+.bolinha.amarelo { background-color: var(--amarelo); }

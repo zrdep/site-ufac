@@ -8,51 +8,141 @@
     <link rel="stylesheet" href="perfil.css">
 </head>
 <body>
+
+
+
+
+    <div class="navegacao">
+        <a href="/dashboard.html" class="voltar">← Voltar para a Dashboard</a>
+    </div>
+
+
+
+
+
     <h1>Olá, <span class="nome-aluno">Nome do Aluno</span> 👋</h1> 
     <p class="curso-aluno">Curso: <span>Sistema de Informação</span></p>
 
-    <div class="dashboard-perfil">
+    <div class="dashboard-resumo">
         <div class="card-informativo">
-            <div class="icone-periodo">
-                <i class="icon">📖</i>
-            </div>
+            <div class="icone-periodo">📖</div>
             <div class="info-card">
                 <p>Período Atual</p>
                 <h2 class="valor">2024.1</h2>
                 <p>2º Período</p>
             </div>
         </div>
-
         <div class="card-informativo">
-            <div class="icone-matriculas">
-                <i class="icon">📅</i>
-            </div>
+            <div class="icone-matriculas">📅</div>
             <div class="info-card">
                 <p>Matrículas</p>
                 <h2 class="valor">5</h2>
                 <p>Disciplinas</p>
             </div>
         </div>
-
         <div class="card-informativo">
-            <div class="icone-coeficiente">
-                <i class="icon">⭐</i>
-            </div>
+            <div class="icone-coeficiente">⭐</div>
             <div class="info-card">
                 <p>Coeficiente de Rendimento</p>
                 <h2 class="valor">8,27</h2>
                 <p>Bom</p>
             </div>
         </div>
-
         <div class="card-informativo">
-            <div class="icone-situacao">
-                <i class="icon">📊</i>
-            </div>
+            <div class="icone-situacao">📊</div>
             <div class="info-card">
                 <p>Situação Acadêmica</p>
                 <h2 class="valor">Regular</h2>
                 <p>Ativa</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="conteudo-principal">
+        <div class="coluna-esquerda">
+            <div class="secao-disciplinas">
+                <table class="tabela-disciplinas">
+                    <thead>
+                        <tr>
+                            <th>Disciplina</th>
+                            <th>Carga</th>
+                            <th>N1</th>
+                            <th>N2</th>
+                            <th>Média</th>
+                            <th>Situação</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Banco de Dados I</td>
+                            <td>60</td><td>8.0</td><td>9.0</td><td>8.5</td>
+                            <td class="status-aprovado">Aprovado</td>
+                        </tr>
+                        <tr>
+                            <td>Programação Web I</td>
+                            <td>60</td><td>7.5</td><td>8.5</td><td>8.0</td>
+                            <td class="status-aprovado">Aprovado</td>
+                        </tr>
+                        <tr>
+                            <td>Redes de Computadores I</td>
+                            <td>60</td><td>7.0</td><td>8.0</td><td>7.5</td>
+                            <td class="status-aprovado">Aprovado</td>
+                        </tr>
+                        <tr>
+                            <td>Calculo I</td>
+                            <td>60</td><td>7.5</td><td>8.5</td><td>8.0</td>
+                            <td class="status-aprovado">Aprovado</td>
+                        </tr>
+                        <tr>
+                            <td>Língua Portuguesa I</td>
+                            <td>45</td><td>7.5</td><td>-</td><td>7.5</td>
+                            <td class="status-processo">Em Processo</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="secao-frequencia">
+                <div class="card-base-frequencia">
+                    <h3 class="titulo-card">Frequência Geral</h3>
+                    <div class="frequencia-info">
+                        <div class="frequencia-porcentagem">
+                            <h2 class="valor-frequencia">90%</h2>
+                        </div>
+                        <div class="frequencia-detalhes">
+                            <p>Presenças: <span>90</span></p>
+                            <p>Faltas: <span class="destaque-vermelho">10</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="secao-calendario">
+            <h3 class="titulo-secao">Calendário Acadêmico</h3>
+            <div class="calendario-mini">
+                <div class="calendario-topo">
+                    <span><</span>
+                    <span class="mes-ano">Maio 2026</span>
+                    <span>></span>
+                </div>
+                <table class="tabela-mes">
+                    <thead>
+                        <tr><th>D</th><th>S</th><th>T</th><th>Q</th><th>Q</th><th>S</th><th>S</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="fora">28</td><td class="fora">29</td><td class="fora">30</td><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+                        <tr><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td class="dia-azul">10</td><td>11</td></tr>
+                        <tr><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td></tr>
+                        <tr><td>19</td><td>20</td><td class="dia-verde">21</td><td>22</td><td>23</td><td>24</td><td>25</td></tr>
+                        <tr><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td><td class="dia-amarelo">31</td><td class="fora">1</td></tr>
+                    </tbody>
+                </table>
+                <div class="eventos-mini">
+                    <div class="evento"><span class="bolinha azul"></span> 10/05 - Trancamento</div>
+                    <div class="evento"><span class="bolinha verde"></span> 21/05 - Prova 2ª Chamada</div>
+                    <div class="evento"><span class="bolinha amarelo"></span> 31/05 - Lançamento Notas</div>
+                </div>
             </div>
         </div>
     </div>
