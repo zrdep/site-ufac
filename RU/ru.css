@@ -1,0 +1,119 @@
+.navbar {
+    background-color: #f1c40f; /* amarelo */
+    padding: 0;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* coloca os itens lado a lado */
+    justify-content: center;
+}
+
+.navbar li {
+    margin: 0;
+}
+
+.navbar a {
+    display: block;
+    padding: 15px 25px;
+    text-decoration: none;
+    color: #003366; /* azul escuro */
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+
+.navbar li.ativo a {
+    background-color: #2980b9; /* azul do item ativo */
+    color: #fff;
+}
+
+.navbar a:hover {
+    background-color: #3498db; /* azul mais claro ao passar o mouse */
+    color: #fff;
+}
+
+.icone {
+    font-size: 18px;
+}
+
+
+/*
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 360px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  padding: 20px;
+  text-align: center;
+}
+
+header .logo {
+  width: 80px;
+}
+
+header h1 {
+  font-size: 18px;
+  color: #003366;
+  margin: 8px 0 4px;
+}
+
+header p {
+  color: #ff9900;
+  font-weight: bold;
+}
+
+.status {
+  margin: 20px 0;
+}
+
+.status h2 {
+  font-size: 16px;
+  color: #555;
+}
+
+.status .aberto {
+  color: green;
+  font-weight: bold;
+}
+
+.botoes button {
+  display: block;
+  width: 100%;
+  margin: 8px 0;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #e0e0e0;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.botoes button:hover {
+  background-color: #d0d0d0;
+}
+
+footer {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer li {
+  margin: 4px 0;
+}
+  */
