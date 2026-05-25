@@ -23,14 +23,78 @@
     box-sizing: border-box;
 }
 
-body {
-    background-color: var(--cinza);
+.container{
+    background-color: var(--cinza-claro);
+
 }
 
-.container {
-    background-color: var(--cinza-claro);
-}
+
+
 
 .box {
-    background-color: var(--cinza-claro);
+    background-color: var(--azul);
+    flex-direction: column;
+
+}
+
+.login-header {
+    height: auto;
+    width: auto;
+    background-color: var(--fundo-claro);
+    color: var(--texto-principal);
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    border-radius: var(--raio-borda);
+    flex-direction: column;
+}
+
+h1{
+    margin-bottom: 10px;
+    color: var(--amarelo);
+    display: block;
+    flex-direction: column;
+}
+
+.logo{
+    content: absolute;
+    display: flex;
+    flex-direction: column;
+}
+
+.cpf{
+    color: var(--texto-principal);
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.senha{
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: var(--texto-principal);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lembrar{
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: var(--texto-secundario);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a{
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+}
+
+:placeholder-shown{
+    justify-content: center;
 }
