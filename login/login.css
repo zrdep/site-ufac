@@ -18,7 +18,7 @@
 }
 
 body {
-    background-color: var(--fundo-claro);
+    background-color: #0675f5;
     font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     display: flex;
     justify-content: center;
@@ -27,19 +27,10 @@ body {
     margin: 0;
 }
 
-.container {
-    height: auto;
-    width: 500px;
-    background: var(--cinza-claro);
-    border-radius: var(--raio-borda);
-    padding: 24px;
-    margin: 0 auto;
-    border: 1px solid var(--cinza-claro);
-    box-shadow: var(--sombra);
-}
-
 /* CABEÇALHO */
 .login-header {
+    height: auto;
+    width: 900px;
     background-color: var(--fundo-claro);
     color: var(--texto-principal);
     line-height: 1.6;
@@ -66,12 +57,14 @@ h1 {
 
 /* FORMULÁRIO */
 .form {
+    width: 900px;
+    height: auto;
     background-color: var(--azul);
     display: flex;
     flex-direction: column;
     gap: 16px;
+    padding: 20px;
     color: var(--branco);
-    padding: 24px;
     border-radius: 0 0 var(--raio-borda) var(--raio-borda);
 }
 
@@ -110,8 +103,9 @@ h1 {
     background: transparent;
     border: none;
     outline: none;
-    padding: 10px;
-    width: 100%;
+    padding: 20px;
+    gap: 10px;
+    width: 300%;
     font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     font-size: 0.9rem;
     color: var(--texto-principal);
@@ -139,7 +133,7 @@ h1 {
     justify-content: center;
     align-items: center;
     padding: 0 20px;
-    gap: 20px;
+    gap: 500px;
 }
 
 .lembrar {
@@ -147,37 +141,34 @@ h1 {
     color: var(--branco);
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 5px;
     cursor: pointer;
     font-size: 0.85rem;
 }
 
 a {
     display: inline-block;
-    color: #3587e5;
+    color: var(--branco);
     font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     font-size: 0.85rem;
     text-decoration: none;
 }
 
-a:hover {
-    text-decoration: underline;
-    color: var(--amarelo);
-}
-
 /* BOTÃO LOGIN */
 button {
+    justify-content: center;
     background-color: var(--amarelo);
     color: var(--branco);
     border-radius: var(--raio-borda);
     border: none;
-    display: block;
+    width: 250px;
+    display: flex;
     margin: 10px auto;
     padding: 10px 40px;
     font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     font-size: 1rem;
     font-weight: 700;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.015em;
     cursor: pointer;
     transition: filter 0.2s, transform 0.15s;
 }
@@ -189,4 +180,12 @@ button:hover {
 
 button:active {
     transform: translateY(0);
+}
+
+a.active {
+    color: var(--amarelo);
+}
+
+a:hover {
+    color: #3889e6  ;
 }
