@@ -1,0 +1,36 @@
+:root {
+    --azul: #0C4F9D;
+    --amarelo: #ffc107;
+    --cinza: #403F4C;
+    --cinza-claro: #9FADBA;
+    --verde: #28a745;
+    --vermelho: #dc3545;
+    --roxo: #6f42c1;
+    
+    --fundo-claro: #f4f7f9;
+    --texto-principal: #333;
+    --texto-secundario: #666;
+    --texto-suave: #888;
+    
+    --branco: #ffffff;
+    --sombra: 0 4px 6px rgba(0, 0, 0, 0.05);
+    --raio-borda: 12px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--cinza);
+}
+
+.container {
+    background-color: var(--cinza-claro);
+}
+
+.box {
+    background-color: var(--cinza-claro);
+}
