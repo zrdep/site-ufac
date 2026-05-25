@@ -6,95 +6,186 @@
     --verde: #28a745;
     --vermelho: #dc3545;
     --roxo: #6f42c1;
-    
+
     --fundo-claro: #f4f7f9;
     --texto-principal: #333;
     --texto-secundario: #666;
     --texto-suave: #888;
-    
+
     --branco: #ffffff;
     --sombra: 0 4px 6px rgba(0, 0, 0, 0.05);
     --raio-borda: 12px;
 }
 
-* {
+body {
+    background-color: #0675f5;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
 }
 
-.container{
-    background-color: var(--cinza-claro);
-
-}
-
-
-
-
-.box {
-    background-color: var(--azul);
-    flex-direction: column;
-
-}
-
+/* CABEÇALHO */
 .login-header {
     height: auto;
-    width: auto;
+    width: 900px;
     background-color: var(--fundo-claro);
     color: var(--texto-principal);
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     line-height: 1.6;
     padding: 20px;
-    justify-content: center;
     display: flex;
+    justify-content: center;
     align-items: center;
-    border-radius: var(--raio-borda);
     flex-direction: column;
+    border-radius: var(--raio-borda) var(--raio-borda) 0 0;
 }
 
-h1{
+.logo {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
     margin-bottom: 10px;
     color: var(--amarelo);
     display: block;
-    flex-direction: column;
 }
 
-.logo{
-    content: absolute;
+/* FORMULÁRIO */
+.form {
+    width: 900px;
+    height: auto;
+    background-color: var(--azul);
     display: flex;
     flex-direction: column;
+    gap: 16px;
+    padding: 20px;
+    color: var(--branco);
+    border-radius: 0 0 var(--raio-borda) var(--raio-borda);
 }
 
-.cpf{
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.form-group label {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: var(--branco);
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* INPUT WRAPPER */
+.input-wrapper {
+    background: var(--branco);
+    border: 2px solid var(--branco);
+    border-radius: var(--raio-borda);
+    height: 42px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+}
+
+.input-wrapper:focus-within {
+    border-color: var(--amarelo);
+}
+
+.input-wrapper input {
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 20px;
+    gap: 10px;
+    width: 300%;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    font-size: 0.9rem;
     color: var(--texto-principal);
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* BOTÃO TOGGLE SENHA */
+.toggle-senha {
+    background: none;
+    border: none;
+    padding: 0 10px;
+    cursor: pointer;
+    color: var(--cinza);
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+.toggle-senha:hover {
+    color: var(--azul);
+}
+
+/* OPTIONS: lembrar-me e esqueci senha */
+.options {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0 20px;
+    gap: 500px;
 }
 
-.senha{
+.lembrar {
     font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    color: var(--texto-principal);
+    color: var(--branco);
     display: flex;
-    justify-content: center;
     align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    font-size: 0.85rem;
 }
 
-.lembrar{
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    color: var(--texto-secundario);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-a{
+a {
     display: inline-block;
-    justify-content: center;
-    align-items: center;
+    color: var(--branco);
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    font-size: 0.85rem;
+    text-decoration: none;
 }
 
-:placeholder-shown{
+/* BOTÃO LOGIN */
+button {
     justify-content: center;
+    background-color: var(--amarelo);
+    color: var(--branco);
+    border-radius: var(--raio-borda);
+    border: none;
+    width: 250px;
+    display: flex;
+    margin: 10px auto;
+    padding: 10px 40px;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.015em;
+    cursor: pointer;
+    transition: filter 0.2s, transform 0.15s;
+}
+
+button:hover {
+    filter: brightness(1.08);
+    transform: translateY(-1px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+a.active {
+    color: var(--amarelo);
+}
+
+a:hover {
+    color: #3889e6  ;
 }
