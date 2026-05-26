@@ -1,0 +1,138 @@
+body {
+    background-color: #0066cc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container Principal */
+.card {
+    background-color: #f4f6f9;
+    width: 100%;
+    max-width: 550px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Topo do Card (Logo e Título) */
+.card-header {
+    background-color: #ffffff;
+    padding: 30px;
+    text-align: center;
+}
+
+.logo-placeholder {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.brand-name {
+    color: #003366;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.page-title {
+    color: #ffbc00;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.logo img {
+    width: 80px;
+    height: auto;
+}
+
+/* Corpo do Card (Formulário) */
+.card-body {
+    background-color: #1656a9;
+    padding: 35px 40px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+input {
+    width: 100%;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 25px;
+    font-size: 14px;
+    color: #333333;
+    outline: none;
+}
+
+input:focus {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+/* Botões e Links de Ações */
+.form-actions {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.btn-submit {
+    background-color: #ffbc00;
+    color: #ffffff;
+    border: none;
+    border-radius: 25px;
+    padding: 12px;
+    width: 180px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background 0.2s;
+}
+
+.btn-submit:hover {
+    background-color: #e0a500;
+}
+
+.back-link {
+    display: block;
+    margin-top: 20px;
+    color: #ffffff;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+/* Mensagens de Feedback */
+.message {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 13px;
+    display: none;
+    text-align: center;
+}
+
+.error {
+    background-color: #ffdddd;
+    color: #cc0000;
+}
+
+.success {
+    background-color: #ddffdd;
+    color: #006600;
+}

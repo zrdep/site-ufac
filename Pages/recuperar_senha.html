@@ -4,9 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recuperar Senha</title>
+    <link rel="stylesheet" href="../Estilos/CSS/recuperar_senha.css">
 </head>
 <body>
-    <h1>Recuperar Senha</h1>
-    <p>Em breve, esta página estará disponível para ajudar os alunos a recuperarem suas senhas de acesso ao Portal do Aluno da UFAC. Fique atento às atualizações!</p>
+<div class="card">
+        <!-- Topo com Identidade Visual -->
+        <div class="card-header">
+            <div class="logo-placeholder">
+                <div class="logo">
+                <img src="../Estilos/Icons e img's/logo_ufac_transparente.png" alt="Logo Ufac">
+            </div>
+            </div>
+            <div class="page-title">Recuperar Senha</div>
+        </div>
+
+        <!-- Formulário de Nova Senha -->
+        <div class="card-body">
+            <form id="recoveryForm">
+                
+                <div class="form-group">
+                    <label for="cpf">CPF</label>
+                    <input type="text" id="cpf" placeholder="000.000.000-00" required maxlength="11" >
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Nova Senha</label>
+                    <input type="password" id="password" placeholder="Digite a nova senha" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmPassword">Confirme a Senha</label>
+                    <input type="password" id="confirmPassword" placeholder="Confirme a nova senha" required>
+                </div>
+
+                <!-- Divs para exibir mensagens de validação -->
+                <div id="errorMessage" class="message error"></div>
+                <div id="successMessage" class="message success"></div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn-submit">ALTERAR</button>
+                    <a href="/site-ufac/login.html" class="back-link">Voltar para o Login</a>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <script src="../Script/recuperar_senha.js"></script>
 </body>
-</html>
