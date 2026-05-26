@@ -6,13 +6,13 @@
 }
 
 body{
-    background:#9FADBA;
+    background:#0C4F9D;
     padding:20px;
 }
 
 h1{
     text-align:center;
-    color:#0C4F9D;
+    color:#FAB720;
     margin-bottom:20px;
 }
 
@@ -26,7 +26,8 @@ h1{
     background:white;
     border-radius:12px;
     padding:20px;
-    box-shadow:0 3px 10px rgba(0,0,0,.1);
+    box-shadow:0 3px 10px #2980b9;
+    border-color: #2980b9;
 }
 
 h2{
@@ -170,4 +171,18 @@ button{
 
 .erro{
     background: #e74c3c;
+}
+
+.logo{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box{
+    background:#f4f7f9;
+    border-radius:12px;
+    padding:20px;
+    box-shadow:0 3px 10px rgba(0,0,0,.1);
 }
