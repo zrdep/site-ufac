@@ -151,3 +151,24 @@ body {
         font-size: 16px;
     }
 }
+
+span a {
+    text-decoration: none;
+    color: var(--azul);
+}
+
+.navegacao {
+    margin-bottom: 20px;
+}
+
+.voltar {
+    text-decoration: none;
+    color: var(--texto-secundario);
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.voltar:hover {
+    color: var(--azul);
+}

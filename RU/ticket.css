@@ -54,55 +54,96 @@ body {
     margin-top: 3px;
 }
 
-/* SALDO */
-.container h2 {
-    font-size: 22px;
+/* SALDO BOX */
+.saldo-box {
+    width: 100%;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 14px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.saldo-box p {
+    font-size: 14px;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.saldo-box h2 {
+    font-size: 32px;
     color: #074F9D;
+    margin: 5px 0;
+}
+
+.btn-recarga {
+    background-color: #074F9D;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
     font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 5px;
 }
 
 /* QR CODE BOX */
 .qr-box {
     width: 100%;
-    background: #fafafa;
-    border: 2px solid #074F9D;
+    background: #fff;
+    border: 1px solid #074F9D;
     border-radius: 14px;
-    padding: 20px;
+    padding: 25px;
 
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 12px;
+    gap: 15px;
+}
+
+.qr-titulo {
+    font-weight: bold;
+    color: #074F9D;
+    font-size: 18px;
 }
 
 .qr-box img {
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
     object-fit: contain;
+    padding: 10px;
+    background: white;
 }
 
 .qr-box .texto {
-    font-size: 15px;
-    color: #555;
+    font-size: 14px;
+    color: #888;
+    text-align: center;
 }
 
-/* BOTÃO */
-.botao {
+/* ACOES */
+.acoes {
     width: 100%;
-    background-color: #2ecc71;
-    color: #fff;
-    border: none;
+}
+
+.botao-secundario {
+    width: 100%;
+    background-color: transparent;
+    border: 2px solid #074F9D;
     border-radius: 10px;
-    padding: 14px 0;
-    font-size: 18px;
+    padding: 12px 0;
+    font-size: 16px;
     font-weight: bold;
     cursor: pointer;
-    transition: 0.2s ease;
 }
 
-.botao:hover {
-    background-color: #27ae60;
-    transform: scale(1.03);
+.botao-secundario a {
+    color: #074F9D;
 }
 
 /* RESPONSIVIDADE */
@@ -120,4 +161,9 @@ body {
     .header h1 {
         font-size: 18px;
     }
+}
+
+a {
+    text-decoration: none;
+    color: var(--branco);
 }
