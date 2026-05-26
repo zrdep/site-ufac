@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurante Universitário - UFAC</title>
-    <link rel="stylesheet" href="rest.css">
+    <link rel="stylesheet" href="../Estilos/CSS/rest.css">
 </head>
 
 <body>
@@ -14,15 +15,15 @@
     <!-- Container principal -->
     <div class="container">
 
-            <div class="navegacao">
-            <a href="/Dashboard/dashboard.html" class="voltar">← Voltar para a Dashboard</a>
-            </div>
+        <div class="navegacao">
+            <a href="dashboard.html" class="voltar">← Voltar para a Dashboard</a>
+        </div>
 
         <!-- Topo -->
         <div class="topo">
 
             <div class="Icon_ufac">
-                <img src="../login/assents/logo_ufac_transparente.png" alt="Logo UFAC">
+                <img src="../Estilos/Icons e img's/logo_ufac_transparente.png" alt="Logo UFAC">
             </div>
 
             <div class="header">
@@ -35,13 +36,12 @@
         <!-- Menu -->
         <div class="menu">
 
-            <div class="card">
-                <img src="ticket.png" alt="Comprar">
-                <span><a href="/RU/eticket.html">E-Ticket</a></span>
+            <div class="card" data-page="eticket.html">
+                <img src="../Estilos/Icons e img's/ticket.png" alt="Comprar">
             </div>
 
-            <div class="card">
-                <img src="card.png" alt="Cardápio">
+            <div class="card" data-page="cardapio.html">
+                <img src="../Estilos/Icons e img's/card.png" alt="Cardápio">
                 <span><a href="/RU/cardapio.html">Cardápio</a></span>
             </div>
         </div>
@@ -57,6 +57,7 @@
         </footer>
 
     </div>
-
+    <script src="../Script/Dashboard.js"></script>
 </body>
+
 </html>

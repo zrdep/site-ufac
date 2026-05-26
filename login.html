@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal do Aluno UFAC</title>
+    <link rel="stylesheet" href="Estilos/CSS/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- CABEÇALHO -->
+        <div class="login-header">
+            <div class="logo">
+                <img src="Estilos/Icons e img's/logo_ufac_transparente.png   " alt="logo-ufac" style="width: 80px; height: auto;">
+            </div>
+            <h1>Portal do Aluno</h1>
+        </div>
+
+        <!-- FORMULÁRIO -->
+        <div class="form">
+
+            <!-- CPF -->
+            <div class="form-group">
+                <label for="cpf">CPF</label>
+                <div class="input-wrapper">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" id="cpf" placeholder="000.000.000-00" maxlength="14" inputmode="numeric" autocomplete="off">
+                </div>
+            </div>
+
+            <!-- SENHA -->
+            <div class="form-group">
+                <label for="senha">Senha</label>
+                <div class="input-wrapper">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" id="senha" placeholder="••••••••" maxlength="20" autocomplete="current-password">
+                    <button type="button" class="toggle-senha" onclick="toggleSenha()">
+                        <i class="fa-solid fa-eye" id="eyeIcon"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- LEMBRAR-ME E ESQUECI SENHA -->
+            <div class="options">
+                <label class="lembrar">
+                    <input type="checkbox" id="lembrar">
+                    <span>Lembrar-me</span>
+                </label>
+                <a href="Pages/recuperar_senha.html" class="recuperar_senha">Esqueci minha senha</a>
+            </div>
+
+            <!-- BOTÃO -->
+           <button type="button" onclick="window.location.href='Pages/Dashboard.html'">LOGIN</button>
+
+        </div>
+    </div>
+    <script src="Script/Dashboard.js"></script>
+</body>
+
+</html> 

@@ -1,0 +1,188 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#0C4F9D;
+    padding:20px;
+}
+
+h1{
+    text-align:center;
+    color:#FAB720;
+    margin-bottom:20px;
+}
+
+.container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    border-radius:12px;
+    padding:20px;
+    box-shadow:0 3px 10px #2980b9;
+    border-color: #2980b9;
+}
+
+h2{
+    color:#0C4F9D;
+    margin-bottom:15px;
+    border-bottom:2px solid #ecf0f1;
+    padding-bottom:8px;
+    text-align: center;
+}
+
+.livro{
+    border:1px solid #ddd;
+    border-radius:8px;
+    padding:12px;
+    margin-bottom:10px;
+}
+
+.livro h3{
+    color:#2c3e50;
+    margin-bottom:5px;
+}
+
+.status{
+    font-weight:bold;
+    margin:5px 0;
+}
+
+.disponivel{
+    color:green;
+}
+
+.emprestado{
+    color:red;
+}
+
+button{
+    padding:8px 12px;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    margin-top:8px;
+}
+
+.locar{
+    background:#27ae60;
+    color:white;
+}
+
+.renovar{
+    background:#2980b9;
+    color:white;
+}
+
+.bloqueado{
+    background:#95a5a6;
+    color:white;
+    cursor:not-allowed;
+}
+
+.mensagem{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+
+    background: #27ae60;
+    color: white;
+
+    padding: 15px 20px;
+    border-radius: 10px;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+
+    font-weight: bold;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(100px);
+
+    transition: all 0.4s ease;
+
+    z-index: 9999;
+}
+
+.mensagem.show{
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+/* Container da navegação */
+.navegacao {
+    margin: 20px 0;
+    padding: 0 10px;
+}
+
+/* Link de voltar */
+.voltar {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 10px 18px;
+
+    background-color: #2563eb;
+    color: #ffffff;
+
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+
+    border-radius: 8px;
+
+    transition: all 0.3s ease;
+}
+
+/* Efeito ao passar o mouse */
+.voltar:hover {
+    background-color: #1d4ed8;
+    transform: translateX(-5px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+/* Efeito ao clicar */
+.voltar:active {
+    transform: translateX(-1px);
+}
+
+/* Acessibilidade */
+.voltar:focus {
+    outline: 2px solid #93c5fd;
+    outline-offset: 2px;
+}
+
+.sucesso{
+    background: #27ae60;
+}
+
+.aviso{
+    background: #f39c12;
+}
+
+.erro{
+    background: #e74c3c;
+}
+
+.logo{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box{
+    background:#f4f7f9;
+    border-radius:12px;
+    padding:20px;
+    box-shadow:0 3px 10px rgba(0,0,0,.1);
+}
