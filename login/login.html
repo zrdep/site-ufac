@@ -7,6 +7,62 @@
     <title>Portal do Aluno UFAC</title>
     <link rel="stylesheet" href="login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* RESPONSIVO */
+        @media (max-width: 600px) {
+            .container {
+                width: 95%;
+                padding: 12px;
+            }
+
+            .login-header {
+                padding: 16px;
+            }
+
+            .login-header img {
+                width: 60px !important;
+            }
+
+            h1 {
+                font-size: 1.2rem;
+            }
+
+            .form {
+                padding: 16px;
+            }
+
+            .form-group {
+                width: 100%;
+            }
+
+            .options {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+                padding: 0;
+            }
+
+            button[type="button"] {
+                width: 60%;
+                padding: 10px;
+                font-size: 0.95rem;
+            }
+        }
+
+        @media (max-width: 400px) {
+            h1 {
+                font-size: 1rem;
+            }
+
+            .form-group {
+                width: 100%;
+            }
+
+            button[type="button"] {
+                width: 80%;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -38,7 +94,7 @@
                 <div class="input-wrapper">
                     <i class="fa-solid fa-lock"></i>
                     <input type="password" id="senha" placeholder="••••••••" maxlength="20" autocomplete="current-password">
-                    <button type="button" class="toggle-senha">
+                    <button type="button" class="toggle-senha" onclick="toggleSenha()">
                         <i class="fa-solid fa-eye" id="eyeIcon"></i>
                     </button>
                 </div>
@@ -54,10 +110,69 @@
             </div>
 
             <!-- BOTÃO -->
-            <button type="button"> <a href="../Dashboard/dashboard.html">LOGIN</a></button>
+            <button type="button" onclick="fazerLogin()">LOGIN</button>
 
         </div>
     </div>
+
+    <script>
+        // Máscara CPF
+        document.getElementById('cpf').addEventListener('input', function (e) {
+            let v = e.target.value.replace(/\D/g, '');
+            v = v.replace(/(\d{3})(\d)/, '$1.$2');
+            v = v.replace(/(\d{3})(\d)/, '$1.$2');
+            v = v.replace(/(\d{3})(\d{1,2})$/, '$1-$2');
+            e.target.value = v;
+        });
+
+        // Bloqueia letras no CPF
+        document.getElementById('cpf').addEventListener('keypress', function (e) {
+            if (!/[0-9]/.test(e.key)) e.preventDefault();
+        });
+
+        // Lembra-me: carrega CPF salvo
+        window.addEventListener('load', function () {
+            const cpfSalvo = localStorage.getItem('cpf_lembrar');
+            if (cpfSalvo) {
+                document.getElementById('cpf').value = cpfSalvo;
+                document.getElementById('lembrar').checked = true;
+            }
+        });
+
+        // Toggle mostrar/esconder senha
+        function toggleSenha() {
+            const input = document.getElementById('senha');
+            const icon = document.getElementById('eyeIcon');
+            if (input.type === 'password') {
+                input.type = 'text';
+                icon.classList.replace('fa-eye', 'fa-eye-slash');
+            } else {
+                input.type = 'password';
+                icon.classList.replace('fa-eye-slash', 'fa-eye');
+            }
+        }
+
+        // Login
+        function fazerLogin() {
+            const cpf = document.getElementById('cpf').value;
+            const senha = document.getElementById('senha').value;
+            const lembrar = document.getElementById('lembrar').checked;
+
+            if (!cpf || !senha) {
+                alert('Preencha todos os campos!');
+                return;
+            }
+
+            if (lembrar) {
+                localStorage.setItem('cpf_lembrar', cpf);
+            } else {
+                localStorage.removeItem('cpf_lembrar');
+            }
+
+            window.location.href = '../Dashboard/dashboard.html';
+        }
+    </script>
+
 </body>
 
 </html>
