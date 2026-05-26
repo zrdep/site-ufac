@@ -23,20 +23,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* era height: 100vh, min-height é melhor para mobile */
+    height: 100vh;
     margin: 0;
-}
-
-/* CONTAINER */
-.container {
-    width: 100%;
-    max-width: 500px; /* limita a largura máxima */
-    margin: 0 auto;
 }
 
 /* CABEÇALHO */
 .login-header {
-    width: 100%; /* era 900px fixo — quebrava em mobile */
+    height: auto;
+    width: 900px;
     background-color: var(--fundo-claro);
     color: var(--texto-principal);
     line-height: 1.6;
@@ -63,7 +57,8 @@ h1 {
 
 /* FORMULÁRIO */
 .form {
-    width: 100%; /* era 900px fixo — quebrava em mobile */
+    width: 900px;
+    height: auto;
     background-color: var(--azul);
     display: flex;
     flex-direction: column;
@@ -98,26 +93,19 @@ h1 {
     align-items: center;
     width: 100%;
     overflow: hidden;
-    padding: 0 10px;
-    gap: 8px;
 }
 
 .input-wrapper:focus-within {
     border-color: var(--amarelo);
 }
 
-.input-wrapper i {
-    color: var(--cinza);
-    font-size: 14px;
-    flex-shrink: 0;
-}
-
 .input-wrapper input {
     background: transparent;
     border: none;
     outline: none;
-    padding: 10px 0; /* era padding: 20px e width: 300% — quebrava o layout */
-    width: 100%;
+    padding: 20px;
+    gap: 10px;
+    width: 300%;
     font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     font-size: 0.9rem;
     color: var(--texto-principal);
@@ -127,18 +115,16 @@ h1 {
 .toggle-senha {
     background: none;
     border: none;
-    padding: 0;
+    padding: 0 10px;
     cursor: pointer;
     color: var(--cinza);
     display: flex;
     align-items: center;
-    flex-shrink: 0;
+    margin: 0;
 }
 
 .toggle-senha:hover {
     color: var(--azul);
-    transform: none; /* evita herdar o translateY do button geral */
-    filter: none;
 }
 
 /* OPTIONS: lembrar-me e esqueci senha */
@@ -146,10 +132,8 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0;
-    gap: 40px; /* era gap: 500px — absurdo para mobile */
-    width: 80%;
-    margin: 0 auto;
+    padding: 0 20px;
+    gap: 500px;
 }
 
 .lembrar {
@@ -170,22 +154,15 @@ a {
     text-decoration: none;
 }
 
-a:hover {
-    color: #3889e6;
-}
-
-a.active {
-    color: var(--amarelo);
-}
-
 /* BOTÃO LOGIN */
 button {
+    justify-content: center;
     background-color: var(--amarelo);
     color: var(--branco);
     border-radius: var(--raio-borda);
     border: none;
-    width: 200px;
-    display: block; /* era display: flex com justify-content — desnecessário */
+    width: 250px;
+    display: flex;
     margin: 10px auto;
     padding: 10px 40px;
     font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
@@ -205,33 +182,10 @@ button:active {
     transform: translateY(0);
 }
 
-/* RESPONSIVO */
-@media (max-width: 600px) {
-    .container {
-        width: 95%;
-    }
-
-    .form-group {
-        width: 100%;
-    }
-
-    .options {
-        width: 100%;
-        gap: 20px;
-    }
-
-    button {
-        width: 70%;
-        padding: 10px;
-    }
+a.active {
+    color: var(--amarelo);
 }
 
-@media (max-width: 400px) {
-    h1 {
-        font-size: 1rem;
-    }
-
-    button {
-        width: 90%;
-    }
+a:hover {
+    color: #3889e6  ;
 }
